@@ -1,0 +1,6 @@
+*.dat
+auto-save-list
+elpa
+*~
+.python-environments
+smex-items
