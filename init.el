@@ -41,7 +41,7 @@
 ;; some appearance
 (ido-mode t)
 (tool-bar-mode 0)
-(scroll-bar-mode 0)
+;;(scroll-bar-mode 0)
 (setq inhibit-startup-screen t)
 (when window-system (set-frame-size (selected-frame) 120 46))
 
@@ -83,17 +83,25 @@
 ;; Spaces 4 lyfe
 (setq-default indent-tabs-mode nil)
 
+
+
+
+;;GOLANG STUFF
 ;;ENV STUFF: invoke shell and print variables.. for exec-from-shell
 (when (memq window-system '(mac ns x))
   (exec-path-from-shell-initialize)
   (exec-path-from-shell-copy-env "GOPATH"))
 
+;; auto fmt code on save
+(add-to-list 'exec-path "~/Development/go/bin")
 
 
-;;GOLANG STUFF
-;;load go-guru
 (add-to-list 'load-path "~/.emacs.d/lisp/")
 (require 'go-guru)
+
+;;function for GO Autocomplete
+(defun auto-complete-for-go ()
+  (auto-complete-mode 1))
 
 ;;do nice things with go-guru
 (go-guru-hl-identifier-mode)
@@ -110,8 +118,9 @@
   (local-set-key (kbd "M-[") 'previous-error)     ; Go to previous error or msg
   (setq gofmt-command "goimports")
   )
+
 (add-hook 'go-mode-hook 'my-go-mode-hook)
-
+(add-hook 'go-mode-hook 'auto-complete-for-go)
+(add-hook 'before-save-hook 'gofmt-before-save)
 ;;; init.el ends here
-
 
