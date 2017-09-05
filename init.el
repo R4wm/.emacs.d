@@ -16,6 +16,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(custom-enabled-themes (quote (wheatgrass)))
  '(package-selected-packages
    (quote
     (flymake-go go-autocomplete go-guru auto-complete exec-path-from-shell go-mode paredit geiser blank-mode yaml-mode flycheck-pyflakes flycheck swiper smex jedi))))
@@ -77,14 +78,11 @@
 (add-hook 'scheme-mode-hook 'run-guile)
 
 ;; ;;NO WHITESPACE
-;; (setq indent-tabs-mode nil)
+;;(setq indent-tabs-mode nil)
 ;; (add-hook 'before-save-hook 'whitespace-cleanup)
 
 ;; Spaces 4 lyfe
 (setq-default indent-tabs-mode nil)
-
-
-
 
 ;;GOLANG STUFF
 ;;ENV STUFF: invoke shell and print variables.. for exec-from-shell
