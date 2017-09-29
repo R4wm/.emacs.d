@@ -33,7 +33,8 @@
 
 (package-initialize)
 (menu-bar-mode 0)
-
+(scroll-bar-mode 0)
+(tool-bar-mode 0)
 ;;install missing packages if any
 (dolist (package package-selected-packages)
   (unless (package-installed-p package)
