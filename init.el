@@ -23,7 +23,7 @@
  '(custom-enabled-themes (quote (deeper-blue)))
  '(package-selected-packages
    (quote
-    (flymake-go go-autocomplete go-guru auto-complete exec-path-from-shell go-mode paredit geiser blank-mode yaml-mode flycheck-pyflakes flycheck swiper smex jedi magit))))
+    (go-autocomplete flymake-go go-guru auto-complete exec-path-from-shell go-mode paredit geiser blank-mode yaml-mode flycheck-pyflakes flycheck swiper smex jedi magit))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
