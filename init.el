@@ -55,7 +55,7 @@
  '(custom-enabled-themes (quote (deeper-blue)))
  '(package-selected-packages
    (quote
-    (lua-mode go-autocomplete flymake-go go-guru auto-complete exec-path-from-shell go-mode paredit geiser yaml-mode flycheck-pyflakes flycheck swiper smex jedi))))
+    (nginx-mode lua-mode go-autocomplete flymake-go go-guru auto-complete exec-path-from-shell go-mode paredit geiser yaml-mode flycheck-pyflakes flycheck swiper smex jedi))))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
