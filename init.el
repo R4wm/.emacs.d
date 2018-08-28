@@ -52,7 +52,7 @@
    [default default default italic underline success warning error])
  '(ansi-color-names-vector
    ["black" "#d55e00" "#009e73" "#f8ec59" "#0072b2" "#cc79a7" "#56b4e9" "white"])
- '(custom-enabled-themes (quote (deeper-blue)))
+ '(custom-enabled-themes (quote (wheatgrass)))
  '(package-selected-packages
    (quote
     (nginx-mode lua-mode go-autocomplete flymake-go go-guru auto-complete exec-path-from-shell go-mode paredit geiser yaml-mode flycheck-pyflakes flycheck swiper smex jedi))))
