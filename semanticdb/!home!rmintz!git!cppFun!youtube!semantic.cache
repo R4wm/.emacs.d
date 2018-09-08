@@ -1,0 +1,102 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [1 20])
+            ("string" include (:system-flag t) nil [21 38])
+            ("header_stuff.h" include nil nil [39 64])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [66 86])
+            ("getTwo" function
+               (:prototype-flag t
+                :type "int")
+                nil [87 100])
+            ("yourface" function
+               (:prototype-flag t
+                :type "void")
+                nil [101 117])
+            ("main" function (:type "int") nil [152 715])
+            ("anothermain" function (:type "void") nil [717 780])
+            ("morestuff" function (:type "void") nil [782 832])
+            ("yourface" function (:type "void") nil [833 882])
+            ("getTwo" function (:type "int") nil [884 911]))          
+      :file "header_stuff.cc"
+      :pointmax 912
+      :fsize 911
+      :lastmodtime '(23444 15127 603169 464000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("HEADER_STUFF_H_" variable (:constant-flag t) nil [33 48])
+            ("iostream" include (:system-flag t) nil [50 69])
+            ("string" include (:system-flag t) nil [70 87])
+            ("PI" variable
+               (:constant-flag t
+                :default-value "3.14191"
+                :type "double")
+                nil [89 115])
+            ("getPostInt" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("stuff" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [131 149]))                  
+                :type "int")
+                nil [116 150])
+            ("areaOfCircle" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("r" variable (:type "int") (reparse-symbol arg-sub-list) [171 177]))                  
+                :type "double")
+                nil [151 178])
+            ("volIfSphere" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("r" variable (:type "int") (reparse-symbol arg-sub-list) [198 204]))                  
+                :type "double")
+                nil [179 205])
+            ("stuff" type
+               (:members 
+                  ( ("getPostInt" function
+                       (:arguments 
+                          ( ("stuff" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [242 260]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [227 281])
+                    ("something" function (:type "void") (reparse-symbol namespacesubparts) [342 398])
+                    ("thisotherthing" function
+                       (:arguments 
+                          ( ("num" variable (:type "int") (reparse-symbol arg-sub-list) [429 437]))                          
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [402 500])
+                    ("getOne" function (:type "int") (reparse-symbol namespacesubparts) [504 535])
+                    ("getName" function (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol namespacesubparts) [539 593])
+                    ("morestuff" function (:type "void") (reparse-symbol namespacesubparts) [597 654])
+                    ("evenmorestuff" function (:type "void") (reparse-symbol namespacesubparts) [658 700]))                  
+                :type "namespace")
+                nil [207 703]))          
+      :file "header_stuff.h"
+      :pointmax 712
+      :fsize 711
+      :lastmodtime '(23444 15077 586503 338000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("HEADER_STUFF_H_")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode makefile-gmake-mode
+      :tags 
+        '( ("all" function nil nil [1 72]))          
+      :file "Makefile"
+      :pointmax 72
+      :fsize 71
+      :lastmodtime '(23444 2035 816638 375000)
+      :unmatched-syntax nil))
+  :file "!home!rmintz!git!cppFun!youtube!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -39,7 +39,7 @@
  '(flymake-google-cpplint-command "/home/rmintz/.local/bin/cpplint")
  '(package-selected-packages
    (quote
-    (swiper flymake-cursor flymake-google-cpplint flymake-cppcheck sr-speedbar ggtags zygospore helm-gtags helm yasnippet ws-butler volatile-highlights use-package undo-tree iedit dtrt-indent counsel-projectile company clean-aindent-mode anzu))))
+    (flycheck-irony swiper flymake-cursor flymake-google-cpplint flymake-cppcheck sr-speedbar ggtags zygospore helm-gtags helm yasnippet ws-butler volatile-highlights use-package undo-tree iedit dtrt-indent counsel-projectile company clean-aindent-mode anzu))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -115,3 +115,16 @@
 ;; (add-hook 'c++-mode-hook 'my:flymake-google-init)
 
 (global-set-key (kbd "C-s") 'swiper)
+
+;; Compilation support
+(global-set-key (kbd "<f5>") (lambda ()
+                               (interactive)
+                               (setq-local compilation-read-command nil)
+                               (call-interactively 'compile)))
+
+;; project management
+(projectile-global-mode)
+
+;; flycheck again.
+(eval-after-load 'flycheck
+  '(add-hook 'flycheck-mode-hook #'flycheck-irony-setup))
