@@ -39,7 +39,7 @@
  '(flymake-google-cpplint-command "/home/rmintz/.local/bin/cpplint")
  '(package-selected-packages
    (quote
-    (flycheck-irony swiper flymake-cursor flymake-google-cpplint flymake-cppcheck sr-speedbar ggtags zygospore helm-gtags helm yasnippet ws-butler volatile-highlights use-package undo-tree iedit dtrt-indent counsel-projectile company clean-aindent-mode anzu))))
+    (0blayout flycheck-irony swiper flymake-cursor flymake-google-cpplint flymake-cppcheck sr-speedbar ggtags zygospore helm-gtags helm yasnippet ws-butler volatile-highlights use-package undo-tree iedit dtrt-indent counsel-projectile company clean-aindent-mode anzu))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -103,17 +103,7 @@
 
 (global-semantic-idle-summary-mode 1)
 
-
-;; ;; FLymake c++ google style
-;; (defun my:flymake-google-init()
-;;   (require 'flymake-google-cpplint)
-;;   (custom-set-variables
-;;    '(flymake-google-cpplint-command "/home/rmintz/.local/bin/cpplint"
-;;   (flymake-google-cpplint-load))))
-
-;; (add-hook 'c-mode-hook 'my:flymake-google-init)
-;; (add-hook 'c++-mode-hook 'my:flymake-google-init)
-
+;; better search please..
 (global-set-key (kbd "C-s") 'swiper)
 
 ;; Compilation support
@@ -124,7 +114,3 @@
 
 ;; project management
 (projectile-global-mode)
-
-;; flycheck again.
-(eval-after-load 'flycheck
-  '(add-hook 'flycheck-mode-hook #'flycheck-irony-setup))
