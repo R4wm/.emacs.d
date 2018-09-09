@@ -39,7 +39,7 @@
  '(flymake-google-cpplint-command "/home/rmintz/.local/bin/cpplint")
  '(package-selected-packages
    (quote
-    (0blayout flycheck-irony swiper flymake-cursor flymake-google-cpplint flymake-cppcheck sr-speedbar ggtags zygospore helm-gtags helm yasnippet ws-butler volatile-highlights use-package undo-tree iedit dtrt-indent counsel-projectile company clean-aindent-mode anzu))))
+    (0blayout flycheck-irony swiper flymake-cursor flymake-google-cpplint flymake-cppcheck sr-speedbar ggtags zygospore helm-gtags helm yasnippet ws-butler volatile-highlights use-package undo-tree iedit dtrt-indent counsel-projectile company clean-aindent-mode anzu smartparens-config))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -114,3 +114,8 @@
 
 ;; project management
 (projectile-global-mode)
+
+
+;; Header completion with company
+(add-to-list 'company-backends 'company-c-headers)
+;; (add-to-list 'company-c-headers-path-system "/usr/include/c++/8.2.1")
