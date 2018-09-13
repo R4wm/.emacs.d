@@ -55,7 +55,7 @@
  '(custom-enabled-themes (quote (wheatgrass)))
  '(package-selected-packages
    (quote
-    (nginx-mode lua-mode go-autocomplete flymake-go go-guru auto-complete exec-path-from-shell go-mode paredit geiser yaml-mode flycheck-pyflakes flycheck swiper smex jedi))))
+    (company company-c-headers sr-speedbar nginx-mode lua-mode go-autocomplete flymake-go go-guru auto-complete exec-path-from-shell go-mode paredit geiser yaml-mode flycheck-pyflakes flycheck swiper smex jedi))))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -66,8 +66,7 @@
 
 
 (menu-bar-mode 0)
-;; (scroll-bar-mode 0)
-;; (tool-bar-mode 0)
+
 ;;install missing packages if any
 (dolist (package package-selected-packages)
   (unless (package-installed-p package)
@@ -161,3 +160,15 @@
 (add-hook 'before-save-hook 'gofmt-before-save)
 ;;; init.el ends here
 
+
+;; CPP stuff
+(setq speedbar-show-unknown-files t)
+
+;; Compilation support
+(global-set-key (kbd "<f5>") (lambda ()
+                               (interactive)
+                               (setq-local compilation-read-command nil)
+                               (call-interactively 'compile)))
+
+(require 'company)
+(add-hook 'after-init-hook 'global-company-mode)
