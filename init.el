@@ -129,7 +129,7 @@
   (exec-path-from-shell-copy-env "GOPATH"))
 
 ;; auto fmt code on save
-(add-to-list 'exec-path "~/Development/go/bin")
+(add-to-list 'exec-path "~/go/bin")
 
 
 (add-to-list 'load-path "~/.emacs.d/lisp/")
