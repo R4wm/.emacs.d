@@ -9,7 +9,15 @@
    'package-archives
    ;; '("melpa" . "http://stable.melpa.org/packages/") ; many packages won't show if using stable
    '("melpa" . "http://melpa.milkbox.net/packages/")
+   t)
+
+  (require 'package)
+  (add-to-list
+   'package-archives
+   ;; '("melpa" . "http://stable.melpa.org/packages/") ; many packages won't show if using stable
+   '("MELPA" . "https://melpa.org/packages/")
    t))
+
 
 (package-initialize)
 
@@ -55,7 +63,7 @@
  '(custom-enabled-themes (quote (wheatgrass)))
  '(package-selected-packages
    (quote
-    (company company-c-headers sr-speedbar nginx-mode lua-mode go-autocomplete flymake-go go-guru auto-complete exec-path-from-shell go-mode paredit geiser yaml-mode flycheck-pyflakes flycheck swiper smex jedi))))
+    (es-mode highlight-indent-guides highlight-indentation protobuf-mode terraform-mode company company-c-headers sr-speedbar nginx-mode lua-mode go-autocomplete flymake-go go-guru auto-complete exec-path-from-shell go-mode paredit geiser yaml-mode flycheck-pyflakes flycheck swiper smex jedi))))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -129,7 +137,7 @@
   (exec-path-from-shell-copy-env "GOPATH"))
 
 ;; auto fmt code on save
-(add-to-list 'exec-path "~/Development/go/bin")
+(add-to-list 'exec-path "~/go/bin")
 
 
 (add-to-list 'load-path "~/.emacs.d/lisp/")
@@ -172,3 +180,6 @@
 
 (require 'company)
 (add-hook 'after-init-hook 'global-company-mode)
+
+(add-to-list 'load-path "~/.emacs.d/packages/highlight-indentation")
+(require 'highlight-indentation)
